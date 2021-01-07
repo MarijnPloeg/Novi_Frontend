@@ -1,0 +1,100 @@
+/*Maak hier jouw CSS!*/
+
+body{
+    background-color: #f0e5d3;
+}
+
+@media (min-width: 1281px) {
+    .parent{
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px auto 50px;
+        grid-template-areas:
+        "a c c"
+        "b c c"
+        "b e d"
+        "f f f";
+    }
+
+    .child{
+        background-color: #a34646;
+        border: 2px solid #813739;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #a{
+        grid-area: a;
+        height: 50px;
+    }
+    #b{
+        grid-area: b;
+    }
+    #c{
+        grid-area: c;
+        height: 240px;
+    }
+    #d{
+        grid-area: d;
+        height: 100px;
+    }
+    #e{
+        grid-area: e;
+        height: auto;
+    }
+    #f{
+        grid-area: f;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 1280px){
+    .parent{
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-template-areas:
+        "a"
+        "b"
+        "c"
+        "d"
+        "e"
+        "."
+        "f";
+    }
+
+    .child{
+        background-color: #a34646;
+        border: 2px solid #813739;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #a{
+        grid-area: a;
+    }
+    #b{
+        grid-area: b;
+    }
+    #c{
+        grid-area: c;
+    }
+    #d{
+        grid-area: d;
+    }
+    #e{
+        grid-area: e;
+    }
+    #f{
+        grid-area: f;
+    }
+}
+

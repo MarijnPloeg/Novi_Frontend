@@ -1,0 +1,28 @@
+#menu {
+    margin: 50px;
+    position: relative;
+    top: 20px;
+    right: 20px;
+}
+
+#menu:hover {
+    background-color: cornflowerblue;
+}
+
+#menu, #menu::before, #menu::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    background-color: lightskyblue;
+    left: 0;
+}
+
+#menu::before {
+    top: -20px;
+}
+
+#menu::after {
+    top: 20px;
+}
